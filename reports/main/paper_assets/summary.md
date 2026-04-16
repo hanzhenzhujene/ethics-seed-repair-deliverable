@@ -11,7 +11,7 @@
 
 - Optimized target: `iterative_from_seed`. Baseline: `seed_frozen`.
 - `iterative_from_seed` beats `seed_frozen` on completed cross-fitted evaluation by 0.0037 accuracy points (95% CI 0.0020 to 0.0055).
-- McNemar p-value for the primary comparison: 4.228e-05 with discordant pairs 33 vs 7.
+- McNemar p-value for the primary comparison: 4.228e-05 with target wins vs baseline wins = 33 vs 7.
 - `iterative_from_seed` also improves over the fair one-shot control by -0.0005 accuracy points.
 - Relative to the expert benchmark, the iterative arm has a delta of 0.0076.
 
