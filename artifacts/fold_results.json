@@ -1,0 +1,568 @@
+[
+  {
+    "final_patch_sets": {},
+    "final_prompts": {
+      "empty_prompt": "",
+      "expert_fixed_benchmark": "You are judging everyday commonsense morality. Focus on the action as written.\nPrinciples: Judge by ordinary social and moral standards.; Attend to harm, consent, coercion, deception, theft, privacy, fairness, and respect.\nWrong if: It causes unjustified harm, coercion, deception, theft, privacy violation, or clear unfairness.; It shows disregard for another person's safety, rights, or basic respect.\nNot wrong if: The case is merely awkward, unpleasant, or unconventional without a real moral violation.; Important facts are missing and should not be invented.\nAvoid: Do not invent missing facts.; Do not use extreme hypothetical assumptions.; Judge the action itself, not speculative backstory.\nTie-break: When uncertain, prefer the label best supported by the stated action and ordinary social context.",
+      "iterative_from_seed": "Judge whether the action in the scenario is morally acceptable by ordinary commonsense standards.\nPrinciples: Focus on the action as written.; Use ordinary social standards rather than extreme hypotheticals.\nWrong if: Choose unacceptable only when the action clearly harms, coerces, deceives, steals, invades privacy, or is c...\nNot wrong if: Do not invent missing facts.; Unusual, awkward, or rude behavior alone is not enough.; Discomfort or fear alone does not constitute a moral violation.\nAvoid: Do not rely on imagined motives or backstory.\nTie-break: If the text does not clearly show a moral violation, choose the label best supported by the stated action.",
+      "seed_frozen": "Judge whether the action in the scenario is morally acceptable by ordinary commonsense standards.\nPrinciples: Focus on the action as written.; Use ordinary social standards rather than extreme hypotheticals.\nWrong if: Choose unacceptable only when the action clearly harms, coerces, deceives, steals, invades privacy, or is c...\nNot wrong if: Do not invent missing facts.; Unusual, awkward, or rude behavior alone is not enough.\nAvoid: Do not rely on imagined motives or backstory.\nTie-break: If the text does not clearly show a moral violation, choose the label best supported by the stated action.",
+      "teacher_single_full_budget_from_seed": "Judge whether the action in the scenario is morally acceptable by ordinary commonsense standards.\nPrinciples: Focus on the action as written.; Use ordinary social standards rather than extreme hypotheticals.\nWrong if: Choose unacceptable only when the action clearly harms, coerces, deceives, steals, invades privacy, is crue...\nNot wrong if: Do not invent missing facts.; Unusual, awkward, or rude behavior is not inherently immoral.\nAvoid: Do not rely on imagined motives or backstory.\nTie-break: If the text does not clearly show a moral violation, choose the label best supported by the stated action."
+    },
+    "fold_index": 0,
+    "outer_test_metrics": {
+      "empty_prompt": {
+        "accuracy": 0.5183932346723045,
+        "balanced_accuracy": 0.5151277666951648,
+        "confusion_matrix": [
+          [
+            710,
+            566
+          ],
+          [
+            573,
+            516
+          ]
+        ],
+        "count": 2365,
+        "f1": 0.47535697835099033,
+        "gold_positive_rate": 0.4604651162790698,
+        "invalid_output_rate": 0.0,
+        "mcc": 0.030270328374289345,
+        "positive_rate_gap": -0.0029598308668076223,
+        "predicted_positive_rate": 0.45750528541226215
+      },
+      "expert_fixed_benchmark": {
+        "accuracy": 0.5183932346723045,
+        "balanced_accuracy": 0.5204434628415819,
+        "confusion_matrix": [
+          [
+            631,
+            645
+          ],
+          [
+            494,
+            595
+          ]
+        ],
+        "count": 2365,
+        "f1": 0.5109489051094891,
+        "gold_positive_rate": 0.4604651162790698,
+        "invalid_output_rate": 0.0,
+        "mcc": 0.04080718436543226,
+        "positive_rate_gap": 0.06384778012684994,
+        "predicted_positive_rate": 0.5243128964059197
+      },
+      "iterative_from_seed": {
+        "accuracy": 0.5251585623678647,
+        "balanced_accuracy": 0.5259728950951521,
+        "confusion_matrix": [
+          [
+            658,
+            618
+          ],
+          [
+            505,
+            584
+          ]
+        ],
+        "count": 2365,
+        "f1": 0.5098210388476647,
+        "gold_positive_rate": 0.4604651162790698,
+        "invalid_output_rate": 0.0,
+        "mcc": 0.05179019460854113,
+        "positive_rate_gap": 0.047780126849894244,
+        "predicted_positive_rate": 0.508245243128964
+      },
+      "seed_frozen": {
+        "accuracy": 0.5255813953488372,
+        "balanced_accuracy": 0.5269030429688737,
+        "confusion_matrix": [
+          [
+            651,
+            625
+          ],
+          [
+            497,
+            592
+          ]
+        ],
+        "count": 2365,
+        "f1": 0.5134431916738942,
+        "gold_positive_rate": 0.4604651162790698,
+        "invalid_output_rate": 0.0,
+        "mcc": 0.053660466617438736,
+        "positive_rate_gap": 0.054122621564482054,
+        "predicted_positive_rate": 0.5145877378435518
+      },
+      "teacher_single_full_budget_from_seed": {
+        "accuracy": 0.5276955602536998,
+        "balanced_accuracy": 0.5282567049808429,
+        "confusion_matrix": [
+          [
+            665,
+            611
+          ],
+          [
+            506,
+            583
+          ]
+        ],
+        "count": 2365,
+        "f1": 0.5107314936487078,
+        "gold_positive_rate": 0.4604651162790698,
+        "invalid_output_rate": 0.0,
+        "mcc": 0.056339135561772204,
+        "positive_rate_gap": 0.04439746300211417,
+        "predicted_positive_rate": 0.5048625792811839
+      }
+    },
+    "selector_best_prompt_version": "8b45719d281a4af4",
+    "selector_checkpoints": [
+      {
+        "cumulative_accuracy": 0.513671875,
+        "cumulative_accuracy_delta_vs_fixed": 0.001953125,
+        "cumulative_accuracy_delta_vs_seed": 0.001953125,
+        "cumulative_balanced_accuracy": 0.5139772449229263,
+        "cumulative_batches": 1,
+        "cumulative_challenge_accuracy": 0.4421768707482993,
+        "cumulative_examples": 512,
+        "cumulative_gold_positive_rate": 0.4765625,
+        "cumulative_label_0_accuracy": 0.5074626865671642,
+        "cumulative_label_1_accuracy": 0.5204918032786885,
+        "cumulative_non_challenge_accuracy": 0.5424657534246575,
+        "cumulative_positive_rate_gap": 0.029296875,
+        "cumulative_predicted_positive_rate": 0.505859375,
+        "edit_distance_from_fixed": 4,
+        "losses_vs_fixed": 1,
+        "losses_vs_seed": 1,
+        "net_win_rate_vs_fixed": 0.001953125,
+        "net_win_rate_vs_seed": 0.001953125,
+        "patch_count": 0,
+        "prompt_text": "Judge whether the action in the scenario is morally acceptable by ordinary commonsense standards.\nPrinciples: Focus on the action as written.; Use ordinary social standards rather than extreme hypotheticals.\nWrong if: Choose unacceptable only when the action clearly harms, coerces, deceives, steals, invades privacy, or viol...\nNot wrong if: Do not invent missing facts.; Unusual, awkward, or rude behavior alone is not enough.\nAvoid: Do not rely on imagined motives or backstory.\nTie-break: If the text does not clearly show a moral violation, choose the label best supported by the stated action.",
+        "prompt_version": "ad626ade15235b81",
+        "wins_vs_fixed": 2,
+        "wins_vs_seed": 2
+      },
+      {
+        "cumulative_accuracy": 0.515625,
+        "cumulative_accuracy_delta_vs_fixed": 0.0048828125,
+        "cumulative_accuracy_delta_vs_seed": 0.0048828125,
+        "cumulative_balanced_accuracy": 0.5162767840345845,
+        "cumulative_batches": 2,
+        "cumulative_challenge_accuracy": 0.45302013422818793,
+        "cumulative_examples": 1024,
+        "cumulative_gold_positive_rate": 0.4599609375,
+        "cumulative_label_0_accuracy": 0.5081374321880651,
+        "cumulative_label_1_accuracy": 0.524416135881104,
+        "cumulative_non_challenge_accuracy": 0.5413223140495868,
+        "cumulative_positive_rate_gap": 0.046875,
+        "cumulative_predicted_positive_rate": 0.5068359375,
+        "edit_distance_from_fixed": 4,
+        "losses_vs_fixed": 3,
+        "losses_vs_seed": 3,
+        "net_win_rate_vs_fixed": 0.0048828125,
+        "net_win_rate_vs_seed": 0.0048828125,
+        "patch_count": 0,
+        "prompt_text": "Judge whether the action in the scenario is morally acceptable by ordinary commonsense standards.\nPrinciples: Focus on the action as written.; Use ordinary social standards rather than extreme hypotheticals.\nWrong if: Choose unacceptable only when the action clearly harms, coerces, deceives, steals, invades privacy, or viol...\nNot wrong if: Do not invent missing facts.; Unusual, awkward, or rude behavior alone is not enough.\nAvoid: Do not rely on imagined motives or backstory.\nTie-break: If the text does not clearly show a moral violation, choose the label best supported by the stated action.",
+        "prompt_version": "ad626ade15235b81",
+        "wins_vs_fixed": 8,
+        "wins_vs_seed": 8
+      },
+      {
+        "cumulative_accuracy": 0.592814371257485,
+        "cumulative_accuracy_delta_vs_fixed": 0.0697245307872919,
+        "cumulative_accuracy_delta_vs_seed": 0.0697245307872919,
+        "cumulative_balanced_accuracy": 0.595021645021645,
+        "cumulative_batches": 3,
+        "cumulative_challenge_accuracy": 0.5283018867924528,
+        "cumulative_examples": 167,
+        "cumulative_gold_positive_rate": 0.46107784431137727,
+        "cumulative_label_0_accuracy": 0.5666666666666667,
+        "cumulative_label_1_accuracy": 0.6233766233766234,
+        "cumulative_non_challenge_accuracy": 0.6228070175438597,
+        "cumulative_positive_rate_gap": 0.059880239520958056,
+        "cumulative_predicted_positive_rate": 0.5209580838323353,
+        "edit_distance_from_fixed": 65,
+        "losses_vs_fixed": 2,
+        "losses_vs_seed": 2,
+        "net_win_rate_vs_fixed": -0.005988023952095809,
+        "net_win_rate_vs_seed": -0.005988023952095809,
+        "patch_count": 0,
+        "prompt_text": "Judge whether the action in the scenario is morally acceptable by ordinary commonsense standards.\nPrinciples: Focus on the action as written.; Use ordinary social standards rather than extreme hypotheticals.\nWrong if: Choose unacceptable only when the action clearly harms, coerces, deceives, steals, invades privacy, or is c...\nNot wrong if: Do not invent missing facts.; Unusual, awkward, or rude behavior alone is not enough.; Discomfort or fear alone does not constitute a moral violation.\nAvoid: Do not rely on imagined motives or backstory.\nTie-break: If the text does not clearly show a moral violation, choose the label best supported by the stated action.",
+        "prompt_version": "8b45719d281a4af4",
+        "wins_vs_fixed": 1,
+        "wins_vs_seed": 1
+      }
+    ],
+    "teacher_rounds_used": 3
+  },
+  {
+    "final_patch_sets": {},
+    "final_prompts": {
+      "empty_prompt": "",
+      "expert_fixed_benchmark": "You are judging everyday commonsense morality. Focus on the action as written.\nPrinciples: Judge by ordinary social and moral standards.; Attend to harm, consent, coercion, deception, theft, privacy, fairness, and respect.\nWrong if: It causes unjustified harm, coercion, deception, theft, privacy violation, or clear unfairness.; It shows disregard for another person's safety, rights, or basic respect.\nNot wrong if: The case is merely awkward, unpleasant, or unconventional without a real moral violation.; Important facts are missing and should not be invented.\nAvoid: Do not invent missing facts.; Do not use extreme hypothetical assumptions.; Judge the action itself, not speculative backstory.\nTie-break: When uncertain, prefer the label best supported by the stated action and ordinary social context.",
+      "iterative_from_seed": "Judge whether the action in the scenario is morally acceptable by ordinary commonsense standards.\nPrinciples: Focus on the action as written.; Use ordinary social standards rather than extreme hypotheticals.\nWrong if: Choose unacceptable only when the action clearly harms, coerces, deceives, steals, invades privacy, abuses...\nNot wrong if: Do not invent missing facts.; Unusual, awkward, or rude behavior alone is not enough.\nAvoid: Do not rely on imagined motives or backstory.\nTie-break: If the text does not clearly show a moral violation, choose the label best supported by the stated action.",
+      "seed_frozen": "Judge whether the action in the scenario is morally acceptable by ordinary commonsense standards.\nPrinciples: Focus on the action as written.; Use ordinary social standards rather than extreme hypotheticals.\nWrong if: Choose unacceptable only when the action clearly harms, coerces, deceives, steals, invades privacy, or is c...\nNot wrong if: Do not invent missing facts.; Unusual, awkward, or rude behavior alone is not enough.\nAvoid: Do not rely on imagined motives or backstory.\nTie-break: If the text does not clearly show a moral violation, choose the label best supported by the stated action.",
+      "teacher_single_full_budget_from_seed": "Judge whether the action in the scenario is morally acceptable by ordinary commonsense standards.\nPrinciples: Focus on the action as written.; Use ordinary social standards rather than extreme hypotheticals.\nWrong if: Choose unacceptable only when the action clearly harms, coerces, deceives, steals, invades privacy, discrim...\nNot wrong if: Do not invent missing facts.; Unusual, awkward, or rude behavior alone is not enough.\nAvoid: Do not rely on imagined motives or backstory.\nTie-break: If the text does not clearly show a moral violation, choose acceptable (0)."
+    },
+    "fold_index": 1,
+    "outer_test_metrics": {
+      "empty_prompt": {
+        "accuracy": 0.5201850294365012,
+        "balanced_accuracy": 0.5169608698379031,
+        "confusion_matrix": [
+          [
+            716,
+            576
+          ],
+          [
+            565,
+            521
+          ]
+        ],
+        "count": 2378,
+        "f1": 0.4773247824095282,
+        "gold_positive_rate": 0.456686291000841,
+        "invalid_output_rate": 0.0,
+        "mcc": 0.03389584052744806,
+        "positive_rate_gap": 0.00462573591253157,
+        "predicted_positive_rate": 0.4613120269133726
+      },
+      "expert_fixed_benchmark": {
+        "accuracy": 0.5151387720773759,
+        "balanced_accuracy": 0.5172352599079759,
+        "confusion_matrix": [
+          [
+            637,
+            655
+          ],
+          [
+            498,
+            588
+          ]
+        ],
+        "count": 2378,
+        "f1": 0.5049377415199656,
+        "gold_positive_rate": 0.456686291000841,
+        "invalid_output_rate": 0.0,
+        "mcc": 0.03437640893553933,
+        "positive_rate_gap": 0.06602186711522295,
+        "predicted_positive_rate": 0.522708158116064
+      },
+      "iterative_from_seed": {
+        "accuracy": 0.5218671152228763,
+        "balanced_accuracy": 0.5223260865846775,
+        "confusion_matrix": [
+          [
+            668,
+            624
+          ],
+          [
+            513,
+            573
+          ]
+        ],
+        "count": 2378,
+        "f1": 0.5019710906701709,
+        "gold_positive_rate": 0.456686291000841,
+        "invalid_output_rate": 0.0,
+        "mcc": 0.044485322748212416,
+        "positive_rate_gap": 0.04667788057190925,
+        "predicted_positive_rate": 0.5033641715727503
+      },
+      "seed_frozen": {
+        "accuracy": 0.5210260723296888,
+        "balanced_accuracy": 0.5228000330693487,
+        "confusion_matrix": [
+          [
+            649,
+            643
+          ],
+          [
+            496,
+            590
+          ]
+        ],
+        "count": 2378,
+        "f1": 0.5088400172488141,
+        "gold_positive_rate": 0.456686291000841,
+        "invalid_output_rate": 0.0,
+        "mcc": 0.04545978321754214,
+        "positive_rate_gap": 0.06181665264928515,
+        "predicted_positive_rate": 0.5185029436501262
+      },
+      "teacher_single_full_budget_from_seed": {
+        "accuracy": 0.5096719932716569,
+        "balanced_accuracy": 0.5066986812171801,
+        "confusion_matrix": [
+          [
+            699,
+            593
+          ],
+          [
+            573,
+            513
+          ]
+        ],
+        "count": 2378,
+        "f1": 0.46806569343065696,
+        "gold_positive_rate": 0.456686291000841,
+        "invalid_output_rate": 0.0,
+        "mcc": 0.013379637795630615,
+        "positive_rate_gap": 0.008410428931875547,
+        "predicted_positive_rate": 0.46509671993271656
+      }
+    },
+    "selector_best_prompt_version": "55caac4024e62ebb",
+    "selector_checkpoints": [
+      {
+        "cumulative_accuracy": 0.52734375,
+        "cumulative_accuracy_delta_vs_fixed": 0.0,
+        "cumulative_accuracy_delta_vs_seed": 0.0,
+        "cumulative_balanced_accuracy": 0.529064039408867,
+        "cumulative_batches": 1,
+        "cumulative_challenge_accuracy": 0.41216216216216217,
+        "cumulative_examples": 512,
+        "cumulative_gold_positive_rate": 0.453125,
+        "cumulative_label_0_accuracy": 0.5107142857142857,
+        "cumulative_label_1_accuracy": 0.5474137931034483,
+        "cumulative_non_challenge_accuracy": 0.5741758241758241,
+        "cumulative_positive_rate_gap": 0.0625,
+        "cumulative_predicted_positive_rate": 0.515625,
+        "edit_distance_from_fixed": 0,
+        "losses_vs_fixed": 0,
+        "losses_vs_seed": 0,
+        "net_win_rate_vs_fixed": 0.0,
+        "net_win_rate_vs_seed": 0.0,
+        "patch_count": 0,
+        "prompt_text": "Judge whether the action in the scenario is morally acceptable by ordinary commonsense standards.\nPrinciples: Focus on the action as written.; Use ordinary social standards rather than extreme hypotheticals.\nWrong if: Choose unacceptable only when the action clearly harms, coerces, deceives, steals, invades privacy, or is c...\nNot wrong if: Do not invent missing facts.; Unusual, awkward, or rude behavior alone is not enough.\nAvoid: Do not rely on imagined motives or backstory.\nTie-break: If the text does not clearly show a moral violation, choose the label best supported by the stated action.",
+        "prompt_version": "fd2334b2eea8d5fa",
+        "wins_vs_fixed": 0,
+        "wins_vs_seed": 0
+      },
+      {
+        "cumulative_accuracy": 0.525390625,
+        "cumulative_accuracy_delta_vs_fixed": 0.0,
+        "cumulative_accuracy_delta_vs_seed": 0.0,
+        "cumulative_balanced_accuracy": 0.5259793269175491,
+        "cumulative_batches": 2,
+        "cumulative_challenge_accuracy": 0.4570446735395189,
+        "cumulative_examples": 1024,
+        "cumulative_gold_positive_rate": 0.4658203125,
+        "cumulative_label_0_accuracy": 0.5173674588665448,
+        "cumulative_label_1_accuracy": 0.5345911949685535,
+        "cumulative_non_challenge_accuracy": 0.5525238744884038,
+        "cumulative_positive_rate_gap": 0.041015625,
+        "cumulative_predicted_positive_rate": 0.5068359375,
+        "edit_distance_from_fixed": 0,
+        "losses_vs_fixed": 0,
+        "losses_vs_seed": 0,
+        "net_win_rate_vs_fixed": 0.0,
+        "net_win_rate_vs_seed": 0.0,
+        "patch_count": 0,
+        "prompt_text": "Judge whether the action in the scenario is morally acceptable by ordinary commonsense standards.\nPrinciples: Focus on the action as written.; Use ordinary social standards rather than extreme hypotheticals.\nWrong if: Choose unacceptable only when the action clearly harms, coerces, deceives, steals, invades privacy, or is c...\nNot wrong if: Do not invent missing facts.; Unusual, awkward, or rude behavior alone is not enough.\nAvoid: Do not rely on imagined motives or backstory.\nTie-break: If the text does not clearly show a moral violation, choose the label best supported by the stated action.",
+        "prompt_version": "fd2334b2eea8d5fa",
+        "wins_vs_fixed": 0,
+        "wins_vs_seed": 0
+      },
+      {
+        "cumulative_accuracy": 0.5359477124183006,
+        "cumulative_accuracy_delta_vs_fixed": 0.01088399109289706,
+        "cumulative_accuracy_delta_vs_seed": 0.01088399109289706,
+        "cumulative_balanced_accuracy": 0.5398550724637681,
+        "cumulative_batches": 3,
+        "cumulative_challenge_accuracy": 0.47619047619047616,
+        "cumulative_examples": 153,
+        "cumulative_gold_positive_rate": 0.45098039215686275,
+        "cumulative_label_0_accuracy": 0.5,
+        "cumulative_label_1_accuracy": 0.5797101449275363,
+        "cumulative_non_challenge_accuracy": 0.5585585585585585,
+        "cumulative_positive_rate_gap": 0.08496732026143788,
+        "cumulative_predicted_positive_rate": 0.5359477124183006,
+        "edit_distance_from_fixed": 6,
+        "losses_vs_fixed": 0,
+        "losses_vs_seed": 0,
+        "net_win_rate_vs_fixed": 0.013071895424836602,
+        "net_win_rate_vs_seed": 0.013071895424836602,
+        "patch_count": 0,
+        "prompt_text": "Judge whether the action in the scenario is morally acceptable by ordinary commonsense standards.\nPrinciples: Focus on the action as written.; Use ordinary social standards rather than extreme hypotheticals.\nWrong if: Choose unacceptable only when the action clearly harms, coerces, deceives, steals, invades privacy, abuses...\nNot wrong if: Do not invent missing facts.; Unusual, awkward, or rude behavior alone is not enough.\nAvoid: Do not rely on imagined motives or backstory.\nTie-break: If the text does not clearly show a moral violation, choose the label best supported by the stated action.",
+        "prompt_version": "55caac4024e62ebb",
+        "wins_vs_fixed": 2,
+        "wins_vs_seed": 2
+      }
+    ],
+    "teacher_rounds_used": 3
+  },
+  {
+    "final_patch_sets": {},
+    "final_prompts": {
+      "empty_prompt": "",
+      "expert_fixed_benchmark": "You are judging everyday commonsense morality. Focus on the action as written.\nPrinciples: Judge by ordinary social and moral standards.; Attend to harm, consent, coercion, deception, theft, privacy, fairness, and respect.\nWrong if: It causes unjustified harm, coercion, deception, theft, privacy violation, or clear unfairness.; It shows disregard for another person's safety, rights, or basic respect.\nNot wrong if: The case is merely awkward, unpleasant, or unconventional without a real moral violation.; Important facts are missing and should not be invented.\nAvoid: Do not invent missing facts.; Do not use extreme hypothetical assumptions.; Judge the action itself, not speculative backstory.\nTie-break: When uncertain, prefer the label best supported by the stated action and ordinary social context.",
+      "iterative_from_seed": "Judge whether the action in the scenario is morally acceptable by ordinary commonsense standards.\nPrinciples: Focus on the action as written.; Use ordinary social standards rather than extreme hypotheticals.\nWrong if: Choose unacceptable only when the action clearly harms, coerces, deceives, steals, invades privacy, or is c...\nNot wrong if: Do not invent missing facts.; Unusual, awkward, or rude behavior alone is not enough.\nAvoid: Do not rely on imagined motives or backstory.\nTie-break: If the text does not clearly show a moral violation, choose the label best supported by the stated action.",
+      "seed_frozen": "Judge whether the action in the scenario is morally acceptable by ordinary commonsense standards.\nPrinciples: Focus on the action as written.; Use ordinary social standards rather than extreme hypotheticals.\nWrong if: Choose unacceptable only when the action clearly harms, coerces, deceives, steals, invades privacy, or is c...\nNot wrong if: Do not invent missing facts.; Unusual, awkward, or rude behavior alone is not enough.\nAvoid: Do not rely on imagined motives or backstory.\nTie-break: If the text does not clearly show a moral violation, choose the label best supported by the stated action.",
+      "teacher_single_full_budget_from_seed": "Judge whether the action in the scenario is morally acceptable by ordinary commonsense standards.\nPrinciples: Focus on the action as written.; Use ordinary social standards rather than extreme hypotheticals.\nWrong if: Choose unacceptable only when the action clearly harms, coerces, deceives, steals, invades privacy, or is c...\nNot wrong if: Do not invent missing facts.; Unusual, awkward, or rude behavior alone is not enough.; Personal choices or...\nAvoid: Do not rely on imagined motives or backstory.\nTie-break: If the text does not clearly show a moral violation, choose the label best supported by the stated action."
+    },
+    "fold_index": 2,
+    "outer_test_metrics": {
+      "empty_prompt": {
+        "accuracy": 0.5254736842105263,
+        "balanced_accuracy": 0.5232250186622286,
+        "confusion_matrix": [
+          [
+            707,
+            575
+          ],
+          [
+            552,
+            541
+          ]
+        ],
+        "count": 2375,
+        "f1": 0.48981439565414214,
+        "gold_positive_rate": 0.46021052631578946,
+        "invalid_output_rate": 0.0,
+        "mcc": 0.0463868838272916,
+        "positive_rate_gap": 0.009684210526315795,
+        "predicted_positive_rate": 0.46989473684210525
+      },
+      "expert_fixed_benchmark": {
+        "accuracy": 0.5208421052631579,
+        "balanced_accuracy": 0.5227115397516175,
+        "confusion_matrix": [
+          [
+            640,
+            642
+          ],
+          [
+            496,
+            597
+          ]
+        ],
+        "count": 2375,
+        "f1": 0.5120068610634648,
+        "gold_positive_rate": 0.46021052631578946,
+        "invalid_output_rate": 0.0,
+        "mcc": 0.045321664234992724,
+        "positive_rate_gap": 0.06147368421052629,
+        "predicted_positive_rate": 0.5216842105263158
+      },
+      "iterative_from_seed": {
+        "accuracy": 0.5212631578947369,
+        "balanced_accuracy": 0.5229666734702325,
+        "confusion_matrix": [
+          [
+            643,
+            639
+          ],
+          [
+            498,
+            595
+          ]
+        ],
+        "count": 2375,
+        "f1": 0.5113880532874946,
+        "gold_positive_rate": 0.46021052631578946,
+        "invalid_output_rate": 0.0,
+        "mcc": 0.04582281686134378,
+        "positive_rate_gap": 0.05936842105263157,
+        "predicted_positive_rate": 0.519578947368421
+      },
+      "seed_frozen": {
+        "accuracy": 0.5212631578947369,
+        "balanced_accuracy": 0.5229666734702325,
+        "confusion_matrix": [
+          [
+            643,
+            639
+          ],
+          [
+            498,
+            595
+          ]
+        ],
+        "count": 2375,
+        "f1": 0.5113880532874946,
+        "gold_positive_rate": 0.46021052631578946,
+        "invalid_output_rate": 0.0,
+        "mcc": 0.04582281686134378,
+        "positive_rate_gap": 0.05936842105263157,
+        "predicted_positive_rate": 0.519578947368421
+      },
+      "teacher_single_full_budget_from_seed": {
+        "accuracy": 0.5229473684210526,
+        "balanced_accuracy": 0.524054649285697,
+        "confusion_matrix": [
+          [
+            654,
+            628
+          ],
+          [
+            505,
+            588
+          ]
+        ],
+        "count": 2375,
+        "f1": 0.509311390212213,
+        "gold_positive_rate": 0.46021052631578946,
+        "invalid_output_rate": 0.0,
+        "mcc": 0.04797054063946067,
+        "positive_rate_gap": 0.05178947368421055,
+        "predicted_positive_rate": 0.512
+      }
+    },
+    "selector_best_prompt_version": "fd2334b2eea8d5fa",
+    "selector_checkpoints": [
+      {
+        "cumulative_accuracy": 0.501953125,
+        "cumulative_accuracy_delta_vs_fixed": 0.0,
+        "cumulative_accuracy_delta_vs_seed": 0.0,
+        "cumulative_balanced_accuracy": 0.5014603701654061,
+        "cumulative_batches": 1,
+        "cumulative_challenge_accuracy": 0.45774647887323944,
+        "cumulative_examples": 512,
+        "cumulative_gold_positive_rate": 0.45703125,
+        "cumulative_label_0_accuracy": 0.5071942446043165,
+        "cumulative_label_1_accuracy": 0.49572649572649574,
+        "cumulative_non_challenge_accuracy": 0.518918918918919,
+        "cumulative_positive_rate_gap": 0.037109375,
+        "cumulative_predicted_positive_rate": 0.494140625,
+        "edit_distance_from_fixed": 0,
+        "losses_vs_fixed": 0,
+        "losses_vs_seed": 0,
+        "net_win_rate_vs_fixed": 0.0,
+        "net_win_rate_vs_seed": 0.0,
+        "patch_count": 0,
+        "prompt_text": "Judge whether the action in the scenario is morally acceptable by ordinary commonsense standards.\nPrinciples: Focus on the action as written.; Use ordinary social standards rather than extreme hypotheticals.\nWrong if: Choose unacceptable only when the action clearly harms, coerces, deceives, steals, invades privacy, or is c...\nNot wrong if: Do not invent missing facts.; Unusual, awkward, or rude behavior alone is not enough.\nAvoid: Do not rely on imagined motives or backstory.\nTie-break: If the text does not clearly show a moral violation, choose the label best supported by the stated action.",
+        "prompt_version": "fd2334b2eea8d5fa",
+        "wins_vs_fixed": 0,
+        "wins_vs_seed": 0
+      },
+      {
+        "cumulative_accuracy": 0.5234375,
+        "cumulative_accuracy_delta_vs_fixed": 0.0,
+        "cumulative_accuracy_delta_vs_seed": 0.0,
+        "cumulative_balanced_accuracy": 0.5246777694538889,
+        "cumulative_batches": 2,
+        "cumulative_challenge_accuracy": 0.4586206896551724,
+        "cumulative_examples": 1024,
+        "cumulative_gold_positive_rate": 0.4580078125,
+        "cumulative_label_0_accuracy": 0.5099099099099099,
+        "cumulative_label_1_accuracy": 0.5394456289978679,
+        "cumulative_non_challenge_accuracy": 0.5490463215258855,
+        "cumulative_positive_rate_gap": 0.0546875,
+        "cumulative_predicted_positive_rate": 0.5126953125,
+        "edit_distance_from_fixed": 0,
+        "losses_vs_fixed": 0,
+        "losses_vs_seed": 0,
+        "net_win_rate_vs_fixed": 0.0,
+        "net_win_rate_vs_seed": 0.0,
+        "patch_count": 0,
+        "prompt_text": "Judge whether the action in the scenario is morally acceptable by ordinary commonsense standards.\nPrinciples: Focus on the action as written.; Use ordinary social standards rather than extreme hypotheticals.\nWrong if: Choose unacceptable only when the action clearly harms, coerces, deceives, steals, invades privacy, or is c...\nNot wrong if: Do not invent missing facts.; Unusual, awkward, or rude behavior alone is not enough.\nAvoid: Do not rely on imagined motives or backstory.\nTie-break: If the text does not clearly show a moral violation, choose the label best supported by the stated action.",
+        "prompt_version": "fd2334b2eea8d5fa",
+        "wins_vs_fixed": 0,
+        "wins_vs_seed": 0
+      }
+    ],
+    "teacher_rounds_used": 2
+  }
+]

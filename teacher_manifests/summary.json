@@ -1,0 +1,77 @@
+{
+  "job_count": 11,
+  "manifests": [
+    {
+      "job_id": "140aa50a57372a6e7bfe8b5180ff64586c49e907482c00b39ecbcbd14316186e",
+      "manifest_path": "/Users/hanzhenzhu/Desktop/ethics-iterative-prompt-rewriting-experiment/outputs/v9_publication/cache/teacher/jobs/140aa50a57372a6e7bfe8b5180ff64586c49e907482c00b39ecbcbd14316186e.json",
+      "model": "gemini-2.5-flash",
+      "status": "succeeded"
+    },
+    {
+      "job_id": "17020477515477ba00d790e4596300b94744126f52f9eb1451e782443f5d2183",
+      "manifest_path": "/Users/hanzhenzhu/Desktop/ethics-iterative-prompt-rewriting-experiment/outputs/v9_publication/cache/teacher/jobs/17020477515477ba00d790e4596300b94744126f52f9eb1451e782443f5d2183.json",
+      "model": "gemini-2.5-flash",
+      "status": "succeeded"
+    },
+    {
+      "job_id": "7c291633800eebb8c102e5918e63fc77090e3bf5086471903043f0ba1308d213",
+      "manifest_path": "/Users/hanzhenzhu/Desktop/ethics-iterative-prompt-rewriting-experiment/outputs/v9_publication/cache/teacher/jobs/7c291633800eebb8c102e5918e63fc77090e3bf5086471903043f0ba1308d213.json",
+      "model": "gemini-2.5-flash",
+      "status": "succeeded"
+    },
+    {
+      "job_id": "72a06728bb5bc774bd7438970132858e558c840d0494045ec4e7e420407af0cf",
+      "manifest_path": "/Users/hanzhenzhu/Desktop/ethics-iterative-prompt-rewriting-experiment/outputs/v9_publication/cache/teacher/jobs/72a06728bb5bc774bd7438970132858e558c840d0494045ec4e7e420407af0cf.json",
+      "model": "gemini-2.5-flash",
+      "status": "succeeded"
+    },
+    {
+      "job_id": "179f6fadeeddcf77015eda6471be7b82620859e770acac01ef2123bb8dcc79f5",
+      "manifest_path": "/Users/hanzhenzhu/Desktop/ethics-iterative-prompt-rewriting-experiment/outputs/v9_publication/cache/teacher/jobs/179f6fadeeddcf77015eda6471be7b82620859e770acac01ef2123bb8dcc79f5.json",
+      "model": "gemini-2.5-flash",
+      "status": "succeeded"
+    },
+    {
+      "job_id": "a9d37b0b1dc46273dd33ed451cb02707f0ca73b323639b0a0580675e8db1131a",
+      "manifest_path": "/Users/hanzhenzhu/Desktop/ethics-iterative-prompt-rewriting-experiment/outputs/v9_publication/cache/teacher/jobs/a9d37b0b1dc46273dd33ed451cb02707f0ca73b323639b0a0580675e8db1131a.json",
+      "model": "gemini-2.5-flash",
+      "status": "succeeded"
+    },
+    {
+      "job_id": "157a7a4030caff889a8acb75a643c5f078929ebbcc8c45f2a17bf93f604c82e8",
+      "manifest_path": "/Users/hanzhenzhu/Desktop/ethics-iterative-prompt-rewriting-experiment/outputs/v9_publication/cache/teacher/jobs/157a7a4030caff889a8acb75a643c5f078929ebbcc8c45f2a17bf93f604c82e8.json",
+      "model": "gemini-2.5-flash",
+      "status": "succeeded"
+    },
+    {
+      "job_id": "ef304c0e182250884d69a2f1a7de9d95604f48e2e165e8f6ea7dc611ec69ced4",
+      "manifest_path": "/Users/hanzhenzhu/Desktop/ethics-iterative-prompt-rewriting-experiment/outputs/v9_publication/cache/teacher/jobs/ef304c0e182250884d69a2f1a7de9d95604f48e2e165e8f6ea7dc611ec69ced4.json",
+      "model": "gemini-2.5-flash",
+      "status": "succeeded"
+    },
+    {
+      "job_id": "0576b25462a45bd8c797a369bd73baf3e78d8d43fce6cbe0f2f92463e61efadc",
+      "manifest_path": "/Users/hanzhenzhu/Desktop/ethics-iterative-prompt-rewriting-experiment/outputs/v9_publication/cache/teacher/jobs/0576b25462a45bd8c797a369bd73baf3e78d8d43fce6cbe0f2f92463e61efadc.json",
+      "model": "gemini-2.5-flash",
+      "status": "succeeded"
+    },
+    {
+      "job_id": "925d7688c4ecb69e3bc37f763245e1f8995f2a311264dd3df47c6bd9df703d62",
+      "manifest_path": "/Users/hanzhenzhu/Desktop/ethics-iterative-prompt-rewriting-experiment/outputs/v9_publication/cache/teacher/jobs/925d7688c4ecb69e3bc37f763245e1f8995f2a311264dd3df47c6bd9df703d62.json",
+      "model": "gemini-2.5-flash",
+      "status": "succeeded"
+    },
+    {
+      "job_id": "894f782b535251942f52bb961f5e9d081f14da3acfa9cd3f842a6adaf5f35553",
+      "manifest_path": "/Users/hanzhenzhu/Desktop/ethics-iterative-prompt-rewriting-experiment/outputs/v9_publication/cache/teacher/jobs/894f782b535251942f52bb961f5e9d081f14da3acfa9cd3f842a6adaf5f35553.json",
+      "model": "gemini-2.5-flash",
+      "status": "succeeded"
+    }
+  ],
+  "models": {
+    "gemini-2.5-flash": 11
+  },
+  "statuses": {
+    "succeeded": 11
+  }
+}

@@ -1,0 +1,7 @@
+| Arm | Teacher Evidence | Calibration Use | Selector Use | Outer-Test Use | Teacher Rewrites |
+| --- | --- | --- | --- | --- | --- |
+| Empty Prompt | none | none | none | final frozen prompt only | 0 |
+| Seed Frozen | none | none | none | final frozen prompt only | 0 |
+| Single Full-Budget | aggregated digest of up to 1536 teacher examples | none during rewrite selection | final prompt chosen without iterative updates | after prompt freeze | 1 |
+| Iterative From Seed | up to 3 rounds x 512 teacher examples | same-batch candidate comparison on 512 | fresh selector checkpoints of 512 | after selector-based freeze | up to 3 |
+| Expert Benchmark | none | none | none | benchmark-only evaluation after adaptation | 0 |

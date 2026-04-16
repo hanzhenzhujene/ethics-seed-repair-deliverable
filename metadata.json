@@ -1,0 +1,10 @@
+{
+  "crossfit_complete": true,
+  "paper_pdf": "/Users/hanzhenzhu/Desktop/ethics-iterative-prompt-rewriting-experiment/reports/v9_publication/exploratory_flash_seed_17/paper/v9_seed_repair_publication.pdf",
+  "report_path": "/Users/hanzhenzhu/Desktop/ethics-iterative-prompt-rewriting-experiment/reports/v9_publication/exploratory_flash_seed_17/v9_seed_improvement_report.md",
+  "run_mode": "exploratory_flash",
+  "run_root": "/Users/hanzhenzhu/Desktop/ethics-iterative-prompt-rewriting-experiment/outputs/v9_publication/runs/exploratory_flash_seed_17",
+  "stage": "exploratory",
+  "transfer_check_complete": false,
+  "variant": "v9_seed_improvement"
+}

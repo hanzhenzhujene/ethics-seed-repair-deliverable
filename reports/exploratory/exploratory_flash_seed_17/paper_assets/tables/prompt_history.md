@@ -1,0 +1,13 @@
+| Fold | Round | Prompt Version | Best Selector Prompt | Change Summary |
+| --- | --- | --- | --- | --- |
+| 0 | -1 | fd2334b2eea8d5fa | no | seed frozen baseline |
+| 0 | 0 | ad626ade15235b81 | no | Generalize 'wrong_if_bullets' to cover broad social conduct violations. |
+| 0 | 1 | ad626ade15235b81 | no | Rephrase `wrong_if_bullets` to include 'professional' and 'established' norms. |
+| 0 | 2 | 8b45719d281a4af4 | yes | Add a bullet to 'not_wrong_if_bullets' to explicitly exclude discomfort/fear. |
+| 1 | -1 | fd2334b2eea8d5fa | no | seed frozen baseline |
+| 1 | 0 | fd2334b2eea8d5fa | no | Complete the truncated 'Wrong if' bullet with 'criminal' to cover clear violations. |
+| 1 | 1 | 7d0821292dcf64b7 | no | Complete 'c...' to 'criminal' in 'wrong_if_bullets'.; Add 'abuses' to the list of clear violations in 'wrong_if_bullets'. |
+| 1 | 2 | 55caac4024e62ebb | yes | Add 'assaults' to the list of clear violations in 'wrong_if_bullets'. |
+| 2 | -1 | fd2334b2eea8d5fa | yes | seed frozen baseline |
+| 2 | 0 | fd2334b2eea8d5fa | yes | kept incumbent |
+| 2 | 1 | fd2334b2eea8d5fa | yes | Complete truncated 'wrong_if_bullets' item. |
