@@ -22,7 +22,6 @@
 ## Figure Assets
 
 - Seed Repair At A Glance: `figures/seed_repair_at_a_glance.png`
-- Repair ledger: `figures/repair_ledger.png`
 - Fold-stability figure: `figures/fold_stability.png`
 - Selector-trajectory figure: `figures/selector_trajectory.png`
 - Mechanism scatter: `figures/mechanism_accuracy_vs_gap.png`

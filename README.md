@@ -48,10 +48,6 @@ Interpretation:
 
 ![Seed Repair At A Glance](reports/main/paper_assets/figures/seed_repair_at_a_glance.png)
 
-### Repair Ledger
-
-![Repair Ledger](reports/main/paper_assets/figures/repair_ledger.png)
-
 ### Fold Stability
 
 ![Fold Stability](reports/main/paper_assets/figures/fold_stability.png)
