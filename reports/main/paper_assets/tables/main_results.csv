@@ -1,6 +1,6 @@
-Arm,Accuracy,Delta Vs Seed,Balanced Accuracy,MCC,Predicted Unacceptable,Gold Unacceptable,Signed Bias,Absolute Bias Magnitude,Invalid Rate
-Seed Frozen,0.5197,0.0000,0.5214,0.0427,0.5188,0.4577,0.0611,0.0611,0.0000
-Iterative From Seed,0.5233,0.0037,0.5246,0.0491,0.5132,0.4577,0.0555,0.0555,0.0000
-Single Full-Budget,0.5239,0.0042,0.5245,0.0488,0.5053,0.4577,0.0476,0.0476,0.0000
-Expert Benchmark,0.5157,-0.0039,0.5181,0.0360,0.5258,0.4577,0.0681,0.0681,0.0000
-Empty Prompt,0.5163,-0.0034,0.5131,0.0262,0.4612,0.4577,0.0035,0.0035,0.0000
+Arm,Accuracy,Delta Vs Baseline,Balanced Accuracy,MCC,Predicted Unacceptable,Gold Unacceptable,Signed Bias,Absolute Bias Magnitude,Invalid Rate
+Seed Frozen [Baseline],0.5197,0.0000,0.5214,0.0427,0.5188,0.4577,0.0611,0.0611,0.0000
+Iterative From Seed [Optimized Target],0.5233,0.0037,0.5246,0.0491,0.5132,0.4577,0.0555,0.0555,0.0000
+Single Full-Budget [Fair One-Shot Control],0.5239,0.0042,0.5245,0.0488,0.5053,0.4577,0.0476,0.0476,0.0000
+Expert Benchmark [Benchmark Only],0.5157,-0.0039,0.5181,0.0360,0.5258,0.4577,0.0681,0.0681,0.0000
+Empty Prompt [Null Control],0.5163,-0.0034,0.5131,0.0262,0.4612,0.4577,0.0035,0.0035,0.0000

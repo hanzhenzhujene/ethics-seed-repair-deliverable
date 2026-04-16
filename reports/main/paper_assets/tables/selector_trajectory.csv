@@ -1,4 +1,4 @@
-Fold,Checkpoint,Cumulative Accuracy,Delta Vs Seed,Signed Bias,Absolute Bias Magnitude,Predicted Unacceptable,Examples
+Fold,Checkpoint,Cumulative Accuracy,Delta Vs Baseline,Signed Bias,Absolute Bias Magnitude,Predicted Unacceptable,Examples
 0,0,0.494140625,0.0,0.072265625,0.072265625,0.51953125,512
 0,1,0.57421875,0.044921875,0.01171875,0.01171875,0.486328125,512
 0,2,0.5547226386806596,0.02970143427014227,0.03148425787106446,0.03148425787106446,0.4992503748125937,667

@@ -19,11 +19,11 @@ This repository is a standalone publication-style deliverable for the ETHICS ite
 
 Primary comparison:
 
-- `iterative_from_seed` accuracy: `0.5233`
-- `seed_frozen` accuracy: `0.5197`
+- Optimized target `iterative_from_seed` accuracy: `0.5233`
+- Baseline `seed_frozen` accuracy: `0.5197`
 - Accuracy delta: `+0.0037`
 - Bootstrap 95% CI: `[+0.0020, +0.0055]`
-- McNemar discordant pairs: `33` vs `7`
+- Target wins vs baseline wins: `33` vs `7`
 - McNemar `p = 4.23e-05`
 
 Interpretation:
@@ -36,11 +36,11 @@ Interpretation:
 
 | Arm | Accuracy | Balanced Accuracy | MCC | Predicted Unacceptable | Gold Unacceptable | Signed Bias |
 | --- | ---: | ---: | ---: | ---: | ---: | ---: |
-| `seed_frozen` | 0.5197 | 0.5214 | 0.0427 | 0.5188 | 0.4577 | +0.0611 |
-| `iterative_from_seed` | 0.5233 | 0.5246 | 0.0491 | 0.5132 | 0.4577 | +0.0555 |
-| `teacher_single_full_budget_from_seed` | 0.5239 | 0.5245 | 0.0488 | 0.5053 | 0.4577 | +0.0476 |
-| `expert_fixed_benchmark` | 0.5157 | 0.5181 | 0.0360 | 0.5258 | 0.4577 | +0.0681 |
-| `empty_prompt` | 0.5163 | 0.5131 | 0.0262 | 0.4612 | 0.4577 | +0.0035 |
+| `seed_frozen` (baseline) | 0.5197 | 0.5214 | 0.0427 | 0.5188 | 0.4577 | +0.0611 |
+| `iterative_from_seed` (optimized target) | 0.5233 | 0.5246 | 0.0491 | 0.5132 | 0.4577 | +0.0555 |
+| `teacher_single_full_budget_from_seed` (fair one-shot control) | 0.5239 | 0.5245 | 0.0488 | 0.5053 | 0.4577 | +0.0476 |
+| `expert_fixed_benchmark` (benchmark only) | 0.5157 | 0.5181 | 0.0360 | 0.5258 | 0.4577 | +0.0681 |
+| `empty_prompt` (null control) | 0.5163 | 0.5131 | 0.0262 | 0.4612 | 0.4577 | +0.0035 |
 
 ## Main Visuals
 
