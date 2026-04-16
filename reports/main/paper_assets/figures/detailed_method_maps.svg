@@ -1,0 +1,213 @@
+<svg width="1800" height="1320" viewBox="0 0 1800 1320" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="8" stdDeviation="10" flood-color="#0F172A" flood-opacity="0.08"/>
+    </filter>
+    <style>
+      .title { font: 700 38px 'Helvetica Neue', Helvetica, Arial, sans-serif; fill: #0F172A; }
+      .subtitle { font: 500 18px 'Helvetica Neue', Helvetica, Arial, sans-serif; fill: #475569; }
+      .panel-title { font: 700 22px 'Helvetica Neue', Helvetica, Arial, sans-serif; fill: #0F172A; }
+      .panel-kicker { font: 700 14px 'Helvetica Neue', Helvetica, Arial, sans-serif; letter-spacing: 0.12em; fill: #64748B; }
+      .card-title { font: 700 19px 'Helvetica Neue', Helvetica, Arial, sans-serif; fill: #0F172A; }
+      .card-body { font: 500 15px 'Helvetica Neue', Helvetica, Arial, sans-serif; fill: #334155; }
+      .small { font: 500 13px 'Helvetica Neue', Helvetica, Arial, sans-serif; fill: #475569; }
+      .badge { font: 700 16px 'Helvetica Neue', Helvetica, Arial, sans-serif; fill: #0F172A; }
+      .step-num { font: 700 20px 'Helvetica Neue', Helvetica, Arial, sans-serif; fill: white; }
+      .step-title { font: 700 18px 'Helvetica Neue', Helvetica, Arial, sans-serif; fill: #0F172A; }
+      .step-body { font: 500 14px 'Helvetica Neue', Helvetica, Arial, sans-serif; fill: #334155; }
+      .mono { font: 700 16px Menlo, Monaco, monospace; }
+    </style>
+    <marker id="arrowSlate" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M0,0 L12,6 L0,12 z" fill="#64748B"/>
+    </marker>
+    <marker id="arrowBlue" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M0,0 L12,6 L0,12 z" fill="#1F6FEB"/>
+    </marker>
+    <marker id="arrowRose" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M0,0 L12,6 L0,12 z" fill="#E26D5A"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="1800" height="1320" fill="#F8FAFC"/>
+  <rect x="28" y="28" width="1744" height="1264" rx="28" fill="white" stroke="#E2E8F0" stroke-width="2"/>
+
+  <text x="72" y="94" class="title">Method Overview: Optimize <tspan class="mono">iterative_from_seed</tspan> against baseline <tspan class="mono">seed_frozen</tspan></text>
+  <text x="72" y="126" class="subtitle">Paper claim: a strong teacher can iteratively repair a relatively weak frozen seed prompt under prompt-only, local-student, contamination-controlled evaluation.</text>
+
+  <g filter="url(#shadow)">
+    <rect x="72" y="154" width="380" height="54" rx="18" fill="#EAF3FF" stroke="#B7D0FF" stroke-width="1.5"/>
+    <text x="96" y="188" class="badge">Optimized target: <tspan class="mono">iterative_from_seed</tspan></text>
+  </g>
+  <g filter="url(#shadow)">
+    <rect x="472" y="154" width="300" height="54" rx="18" fill="#F6EFE9" stroke="#D5C4B4" stroke-width="1.5"/>
+    <text x="496" y="188" class="badge">Baseline: <tspan class="mono">seed_frozen</tspan></text>
+  </g>
+  <g filter="url(#shadow)">
+    <rect x="794" y="154" width="456" height="54" rx="18" fill="#FCEDEA" stroke="#E7B8B0" stroke-width="1.5"/>
+    <text x="818" y="188" class="badge">Locked from the teacher: <tspan class="mono">outer_test</tspan>, <tspan class="mono">official_test</tspan>, expert benchmark</text>
+  </g>
+
+  <g filter="url(#shadow)">
+    <rect x="72" y="246" width="1656" height="352" rx="26" fill="#FCFEFF" stroke="#DCE7F3" stroke-width="2"/>
+  </g>
+  <text x="104" y="290" class="panel-kicker">A. DATA PROTOCOL</text>
+  <text x="104" y="324" class="panel-title">Primary metric uses only held-out outer-test folds; the official test stays untouched until an optional transfer check.</text>
+
+  <rect x="104" y="364" width="120" height="126" rx="20" fill="#EAF3FF"/>
+  <text x="132" y="408" class="card-title">Source</text>
+  <text x="132" y="436" class="card-body">Official ETHICS</text>
+  <text x="132" y="458" class="card-body">train + validation</text>
+
+  <rect x="266" y="364" width="230" height="126" rx="20" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="1.5"/>
+  <text x="294" y="404" class="card-title">Deterministic development pool</text>
+  <text x="294" y="432" class="card-body">Duplicate groups stay intact.</text>
+  <text x="294" y="454" class="card-body">Shuffle is fixed per run.</text>
+
+  <rect x="538" y="364" width="264" height="126" rx="20" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="1.5"/>
+  <text x="566" y="404" class="card-title">3 outer folds</text>
+  <text x="566" y="432" class="card-body">Each example appears</text>
+  <text x="566" y="454" class="card-body">in <tspan class="mono">outer_test</tspan> exactly once.</text>
+
+  <rect x="844" y="350" width="268" height="68" rx="18" fill="#EAF3FF" stroke="#B7D0FF" stroke-width="1.5"/>
+  <text x="872" y="392" class="card-title">teacher_dev</text>
+  <rect x="844" y="430" width="268" height="68" rx="18" fill="#FFF5E5" stroke="#F0C36C" stroke-width="1.5"/>
+  <text x="872" y="472" class="card-title">calibration_dev</text>
+  <rect x="844" y="510" width="268" height="68" rx="18" fill="#ECFDF3" stroke="#8FD0A9" stroke-width="1.5"/>
+  <text x="872" y="552" class="card-title">selector_dev</text>
+
+  <rect x="1158" y="364" width="236" height="126" rx="20" fill="#FCEDEA" stroke="#E7B8B0" stroke-width="1.5"/>
+  <text x="1186" y="404" class="card-title">Fold-local holdout</text>
+  <text x="1186" y="432" class="card-body"><tspan class="mono">outer_test</tspan> is never shown</text>
+  <text x="1186" y="454" class="card-body">during prompt adaptation.</text>
+
+  <rect x="1432" y="364" width="264" height="126" rx="20" fill="#ECFDF3" stroke="#8FD0A9" stroke-width="1.5"/>
+  <text x="1460" y="404" class="card-title">Cross-fitted primary analysis</text>
+  <text x="1460" y="432" class="card-body">Aggregate out-of-fold predictions,</text>
+  <text x="1460" y="454" class="card-body">McNemar, and bootstrap CI.</text>
+
+  <path d="M224 427 H250" stroke="#64748B" stroke-width="3" marker-end="url(#arrowSlate)"/>
+  <path d="M496 427 H522" stroke="#64748B" stroke-width="3" marker-end="url(#arrowSlate)"/>
+  <path d="M802 427 H828" stroke="#64748B" stroke-width="3" marker-end="url(#arrowSlate)"/>
+  <path d="M1112 427 H1142" stroke="#64748B" stroke-width="3" marker-end="url(#arrowSlate)"/>
+  <path d="M802 427 C824 427 824 384 844 384" stroke="#64748B" stroke-width="2.5" fill="none" marker-end="url(#arrowSlate)"/>
+  <path d="M802 427 C824 427 824 464 844 464" stroke="#64748B" stroke-width="2.5" fill="none" marker-end="url(#arrowSlate)"/>
+  <path d="M802 427 C824 427 824 544 844 544" stroke="#64748B" stroke-width="2.5" fill="none" marker-end="url(#arrowSlate)"/>
+
+  <rect x="104" y="512" width="668" height="52" rx="16" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="1.2"/>
+  <text x="128" y="544" class="small">Development-only evidence drives adaptation. The official test remains locked by policy and, if used later, is labeled only as a Reused Holdout / Transfer Check.</text>
+
+  <g filter="url(#shadow)">
+    <rect x="72" y="610" width="1060" height="648" rx="26" fill="#FCFEFF" stroke="#DCE7F3" stroke-width="2"/>
+  </g>
+  <text x="104" y="654" class="panel-kicker">B. CONTROLLED WITHIN-FOLD OPTIMIZATION</text>
+  <text x="104" y="688" class="panel-title">Stable within-fold optimization:</text>
+  <text x="104" y="716" class="panel-title">few large rounds, same-batch ranking, selector isolation, and explicit “no change” behavior.</text>
+
+  <rect x="112" y="748" width="920" height="78" rx="18" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="1.3"/>
+  <text x="140" y="779" class="small">Inside the loop, the optimized target is <tspan class="mono">iterative_from_seed</tspan> and the fixed baseline is <tspan class="mono">seed_frozen</tspan>. The expert benchmark stays outside the loop.</text>
+  <text x="140" y="805" class="small">Each round scores the seed, the incumbent, and all teacher candidates on the same fresh calibration batch before any selector decision.</text>
+
+  <g filter="url(#shadow)">
+    <circle cx="176" cy="922" r="34" fill="#1F6FEB"/>
+    <text x="166" y="930" class="step-num">1</text>
+    <rect x="226" y="870" width="240" height="104" rx="20" fill="#EAF3FF" stroke="#B7D0FF" stroke-width="1.5"/>
+    <text x="250" y="908" class="step-title">Start from frozen seed</text>
+    <text x="250" y="936" class="step-body">Structured prompt only.</text>
+    <text x="250" y="958" class="step-body">No fine-tuning, no retrieval.</text>
+  </g>
+
+  <g filter="url(#shadow)">
+    <circle cx="514" cy="922" r="34" fill="#1F6FEB"/>
+    <text x="504" y="930" class="step-num">2</text>
+    <rect x="564" y="870" width="242" height="104" rx="20" fill="#EAF3FF" stroke="#B7D0FF" stroke-width="1.5"/>
+    <text x="588" y="908" class="step-title">Score one teacher batch</text>
+    <text x="588" y="936" class="step-body">Run current prompt and seed on the</text>
+    <text x="588" y="958" class="step-body">same examples; build one digest.</text>
+  </g>
+
+  <path d="M466 922 H478" stroke="#1F6FEB" stroke-width="4" marker-end="url(#arrowBlue)"/>
+
+  <g filter="url(#shadow)">
+    <circle cx="176" cy="1096" r="34" fill="#1F6FEB"/>
+    <text x="166" y="1104" class="step-num">3</text>
+    <rect x="226" y="1044" width="240" height="104" rx="20" fill="#FFF5E5" stroke="#F0C36C" stroke-width="1.5"/>
+    <text x="250" y="1082" class="step-title">Teacher proposes up to 3 edits</text>
+    <text x="250" y="1110" class="step-body">Gemini returns concise structured revisions.</text>
+    <text x="250" y="1132" class="step-body">Low-confidence default is “no change.”</text>
+  </g>
+
+  <g filter="url(#shadow)">
+    <circle cx="514" cy="1096" r="34" fill="#1F6FEB"/>
+    <text x="504" y="1104" class="step-num">4</text>
+    <rect x="564" y="1044" width="242" height="104" rx="20" fill="#FFF5E5" stroke="#F0C36C" stroke-width="1.5"/>
+    <text x="588" y="1082" class="step-title">Same-batch calibration ranking</text>
+    <text x="588" y="1110" class="step-body">Compare seed, incumbent, and candidates</text>
+    <text x="588" y="1132" class="step-body">before any adoption decision.</text>
+  </g>
+
+  <path d="M514 958 V1028" stroke="#1F6FEB" stroke-width="4" marker-end="url(#arrowBlue)"/>
+  <path d="M466 1096 H478" stroke="#1F6FEB" stroke-width="4" marker-end="url(#arrowBlue)"/>
+
+  <g filter="url(#shadow)">
+    <circle cx="854" cy="922" r="34" fill="#1F6FEB"/>
+    <text x="844" y="930" class="step-num">5</text>
+    <rect x="904" y="870" width="190" height="104" rx="20" fill="#ECFDF3" stroke="#8FD0A9" stroke-width="1.5"/>
+    <text x="924" y="908" class="step-title">Selector checkpoint</text>
+    <text x="924" y="936" class="step-body">Compare incumbent,</text>
+    <text x="924" y="958" class="step-body">best-so-far, and seed.</text>
+  </g>
+
+  <g filter="url(#shadow)">
+    <circle cx="854" cy="1096" r="34" fill="#1F6FEB"/>
+    <text x="844" y="1104" class="step-num">6</text>
+    <rect x="904" y="1044" width="190" height="104" rx="20" fill="#ECFDF3" stroke="#8FD0A9" stroke-width="1.5"/>
+    <text x="924" y="1082" class="step-title">Freeze or continue</text>
+    <text x="924" y="1110" class="step-body">Adopt, keep, or revert</text>
+    <text x="924" y="1132" class="step-body">to the best prompt so far.</text>
+  </g>
+
+  <path d="M806 922 H818" stroke="#1F6FEB" stroke-width="4" marker-end="url(#arrowBlue)"/>
+  <path d="M854 958 V1028" stroke="#1F6FEB" stroke-width="4" marker-end="url(#arrowBlue)"/>
+  <path d="M904 1096 H1114" stroke="#1F6FEB" stroke-width="4" fill="none"/>
+  <path d="M1114 1096 C1136 1096 1136 818 348 818" stroke="#1F6FEB" stroke-width="3" stroke-dasharray="10 8" fill="none" marker-end="url(#arrowBlue)"/>
+
+  <rect x="226" y="1166" width="798" height="58" rx="16" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="1.2"/>
+  <text x="250" y="1202" class="small">Fair control: <tspan class="mono">teacher_single_full_budget_from_seed</tspan> sees the same total teacher evidence budget, but only once, and then freezes after a single rewrite.</text>
+
+  <g filter="url(#shadow)">
+    <rect x="1166" y="610" width="562" height="648" rx="26" fill="#FCFEFF" stroke="#DCE7F3" stroke-width="2"/>
+  </g>
+  <text x="1198" y="654" class="panel-kicker">C. EVIDENCE BOUNDARIES AND SAVED OUTPUTS</text>
+  <text x="1198" y="688" class="panel-title">Compact teacher packets in;</text>
+  <text x="1198" y="716" class="panel-title">locked evaluation and frozen run artifacts out.</text>
+
+  <g filter="url(#shadow)">
+    <rect x="1198" y="742" width="494" height="140" rx="22" fill="#EAF3FF" stroke="#B7D0FF" stroke-width="1.5"/>
+  </g>
+  <text x="1228" y="782" class="card-title">Teacher-visible packet</text>
+  <text x="1228" y="812" class="card-body">• current vs seed confusion counts, false positives, false negatives</text>
+  <text x="1228" y="838" class="card-body">• predicted unacceptable rate vs gold unacceptable rate</text>
+  <text x="1228" y="864" class="card-body">• representative examples from wins, losses, both wrong, both right</text>
+
+  <g filter="url(#shadow)">
+    <rect x="1198" y="912" width="494" height="140" rx="22" fill="#FCEDEA" stroke="#E7B8B0" stroke-width="1.5"/>
+  </g>
+  <text x="1228" y="952" class="card-title">Locked from the teacher</text>
+  <text x="1228" y="982" class="card-body">• outer_test and final paired statistics during adaptation</text>
+  <text x="1228" y="1008" class="card-body">• official test / transfer check before gating passes</text>
+  <text x="1228" y="1034" class="card-body">• expert benchmark prompt and its benchmark scores</text>
+
+  <g filter="url(#shadow)">
+    <rect x="1198" y="1082" width="494" height="140" rx="22" fill="#ECFDF3" stroke="#8FD0A9" stroke-width="1.5"/>
+  </g>
+  <text x="1228" y="1122" class="card-title">Final saved artifacts</text>
+  <text x="1228" y="1152" class="card-body">• frozen prompt per fold, out-of-fold predictions, McNemar, bootstrap CI</text>
+  <text x="1228" y="1178" class="card-body">• prompt history, figures, tables, paper PDF, and manifest summaries</text>
+  <text x="1228" y="1204" class="card-body">• transfer check only if the cross-fitted gate passes</text>
+
+  <path d="M1445 882 V904" stroke="#64748B" stroke-width="3" marker-end="url(#arrowSlate)"/>
+  <path d="M1445 1052 V1074" stroke="#64748B" stroke-width="3" marker-end="url(#arrowSlate)"/>
+
+  <rect x="1198" y="1244" width="494" height="44" rx="16" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="1.2"/>
+  <text x="1224" y="1271" class="small">Interpretation boundary: if gains mostly reduce bias drift, describe the mechanism as targeted calibration repair rather than broad reasoning improvement.</text>
+</svg>

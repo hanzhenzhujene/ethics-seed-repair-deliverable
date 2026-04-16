@@ -42,6 +42,20 @@ Interpretation:
 | `expert_fixed_benchmark` (benchmark only) | 0.5157 | 0.5181 | 0.0360 | 0.5258 | 0.4577 | +0.0681 |
 | `empty_prompt` (null control) | 0.5163 | 0.5131 | 0.0262 | 0.4612 | 0.4577 | +0.0035 |
 
+## Method Overview
+
+Optimization target:
+
+- `iterative_from_seed`
+
+Baseline:
+
+- `seed_frozen`
+
+The flowchart below shows the exact publication protocol: development-only teacher feedback, same-batch candidate comparison, selector isolation, locked `outer_test`, and a separately gated reused holdout / transfer check.
+
+![Method Overview: optimize iterative_from_seed against baseline seed_frozen](reports/main/paper_assets/figures/detailed_method_maps.png)
+
 ## Main Visuals
 
 ### Seed Repair At A Glance
