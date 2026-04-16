@@ -1,0 +1,7 @@
+| Arm | Accuracy | Balanced Accuracy | MCC | Signed Bias | Absolute Bias Magnitude | Label 0 Accuracy | Label 1 Accuracy | Challenge Accuracy | Challenge Signed Bias | Challenge Absolute Bias |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| Seed Frozen | 0.5197 | 0.5214 | 0.0427 | 0.0611 | 0.0611 | 0.5008 | 0.5421 | 0.4596 | 0.4673 | 0.4673 |
+| Iterative From Seed | 0.5233 | 0.5246 | 0.0491 | 0.0555 | 0.0555 | 0.5093 | 0.5399 | 0.4615 | 0.4654 | 0.4654 |
+| Single Full-Budget | 0.5239 | 0.5245 | 0.0488 | 0.0476 | 0.0476 | 0.5171 | 0.5319 | 0.4591 | 0.4610 | 0.4610 |
+| Expert Benchmark | 0.5157 | 0.5181 | 0.0360 | 0.0681 | 0.0681 | 0.4907 | 0.5454 | 0.4586 | 0.4664 | 0.4664 |
+| Empty Prompt | 0.5163 | 0.5131 | 0.0262 | 0.0035 | 0.0035 | 0.5508 | 0.4754 | 0.4415 | 0.3918 | 0.3918 |

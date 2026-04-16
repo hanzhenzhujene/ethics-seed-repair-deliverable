@@ -1,10 +1,16 @@
 {
-  "crossfit_complete": true,
-  "paper_pdf": "/Users/hanzhenzhu/Desktop/ethics-iterative-prompt-rewriting-experiment/reports/v9_publication/exploratory_flash_seed_17/paper/v9_seed_repair_publication.pdf",
-  "report_path": "/Users/hanzhenzhu/Desktop/ethics-iterative-prompt-rewriting-experiment/reports/v9_publication/exploratory_flash_seed_17/v9_seed_improvement_report.md",
-  "run_mode": "exploratory_flash",
-  "run_root": "/Users/hanzhenzhu/Desktop/ethics-iterative-prompt-rewriting-experiment/outputs/v9_publication/runs/exploratory_flash_seed_17",
+  "project": "ETHICS seed-repair deliverable",
+  "variant": "v9_seed_improvement",
   "stage": "exploratory",
+  "run_mode": "exploratory_flash",
+  "crossfit_complete": true,
   "transfer_check_complete": false,
-  "variant": "v9_seed_improvement"
+  "teacher_model": "gemini-2.5-flash",
+  "student_backend": "mlx_lm",
+  "student_model": "mlx-community/Qwen2.5-0.5B-Instruct-4bit",
+  "report_path": "reports/main/v9_seed_improvement_report.md",
+  "paper_pdf": "paper/v9_seed_repair_publication.pdf",
+  "primary_comparison": "iterative_from_seed vs seed_frozen",
+  "primary_accuracy_delta": 0.00364636510104821,
+  "primary_mcnemar_p_value": 4.2277022657799534e-05
 }

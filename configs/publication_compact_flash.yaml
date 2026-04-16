@@ -1,7 +1,7 @@
 experiment:
   name: ethics_iterative_prompt_rewriting_experiment_v9_publication_compact_flash
   variant: v9_seed_improvement
-  seed: 17
+  seed: 23
   bootstrap_samples: 4000
   bootstrap_unit: duplicate_group
   output_root: outputs/v9_publication
